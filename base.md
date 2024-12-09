@@ -36,9 +36,18 @@ creat了一个虚拟环境 envsPace<br>
 要注意conda的版本不能太低，会不兼容，出现问题。<br>
 下载地址：https://repo.anaconda.com/archive/ <br>
 
-
-
 ### 使用rpm命令时提示下载，下载时需要用到root权限，提示Authentication failure，刚安装完，没有设置root用户密码导致的。<br>
 使用
 `sudo passwd`<br>
 输入并设置密码即可<br>
+
+## 安装opencv C++&Python两个版本
+1. Python参考链接：https://cn.linux-console.net/?p=30668
+2. C++参考链接:https://blog.csdn.net/qq_40342400/article/details/135552011   https://blog.csdn.net/xhtchina/article/details/126422425
+   在下载的时候提示
+   E: Package 'python-dev' has no installation candidate
+   E: Unable to locate package python-numpy
+   E: Unable to locate package libjasper-dev
+   E: Unable to locate package libdc1394-22-dev
+   `sudo apt-get install python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-dev`
+   参考链接中的指令修正
