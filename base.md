@@ -44,10 +44,27 @@ creat了一个虚拟环境 envsPace<br>
 ## 安装opencv C++&Python两个版本
 1. Python参考链接：https://cn.linux-console.net/?p=30668
 2. C++参考链接:https://blog.csdn.net/qq_40342400/article/details/135552011   https://blog.csdn.net/xhtchina/article/details/126422425
-   在下载的时候提示
-   E: Package 'python-dev' has no installation candidate
-   E: Unable to locate package python-numpy
-   E: Unable to locate package libjasper-dev
-   E: Unable to locate package libdc1394-22-dev
+   在下载的时候提示<br>
+   E: Package 'python-dev' has no installation candidate<br>
+   E: Unable to locate package python-numpy<br>
+   E: Unable to locate package libjasper-dev<br>
+   E: Unable to locate package libdc1394-22-dev<br>
+   修正后：<br>
    `sudo apt-get install python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-dev`
-   参考链接中的指令修正
+
+ ### 关于检验opencv版本：<br>
+   `pkg-config opencv --modversion		# 4.0以下版本`<br>
+ 
+   `opencv_version				# 4.0以上版本`<br>
+
+   打开摄像头<br>
+   `cd ../samples/cpp/example_cmake`<br>
+   `cmake .`<br>
+   `make`<br>
+   `./opencv_example`<br>
+   
+## 安装ros2
+运行小海龟仿真的时候提示：<br>
+Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.<br>
+不过窗口调用出来了,但是不能控制移动 <br>
+也许有用的链接： https://stackoverflow.com/questions/69994530/qt-qpa-plugin-could-not-find-the-qt-platform-plugin-wayland/74888186#74888186 <br>
