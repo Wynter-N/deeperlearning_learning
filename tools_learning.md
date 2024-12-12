@@ -10,3 +10,30 @@
 8. `mkdir file` 新建文件夹
 9. `rm -i tempfile.txt` 删除 -i是让系统在执行删除操作时增加一行确认信息；也可以使用`alias rm='rm -i'`让-i成为默认参数
 10. `ps`查询当前进程
+
+# tmux工具使用
+参考链接：<https://www.cnblogs.com/zhiminyu/p/17457933.html> 
+#### to name but a few
+ ![image](https://github.com/user-attachments/assets/e8e445a3-247f-4fdc-adb2-e45d276acfcb)
+ 1. 安装 `sudo apt-get install tmux`
+ 2. 启动与退出 `tmux`   `exit`或按下Ctrl+d
+ 3. 新建会话并命名 `tmux new -s <session-name> `
+ 4. 分离会话 `tmux detach` 或按下 Ctrl+b d  本条命令执行后，会退出当前窗口，但是会话仍在运行
+ 5. 查看当前所有tmux会话 `tmux ls` or `tmux list-session`
+ 6. 重新接入某个已存在的会话 <br>
+     使用会话编号 `tmux attach -t 0` <br>
+     使用会话名称 `tmux attach -t <session-name>` <br>
+ 7. 杀死会话 <br>
+     使用会话编号 `tmux kill-session -t 0` <br>
+     使用会话名称 `tmux kill-session -t <session-name>` <br>
+ 8. 切换会话 <br>
+     使用会话编号 `tmux switch -t 0` <br>
+     使用会话名称 `tmux switch -t <session-name>` <br>
+ 9. 划分窗格 <br>
+     上下： `tmux split-window` <br>
+     左右： `tmux split-window -h` <br>
+ 10. 切换光标 <br> 
+`光标切换到上方窗格 tmux select-pane -U 光标切换到下方窗格 tmux select-pane -D `<br>
+`光标切换到左边窗格 tmux select-pane -L 光标切换到右边窗格 tmux select-pane -R `<br>
+ 11. 列出所有快捷键 `tmux list-keys`
+
