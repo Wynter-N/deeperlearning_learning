@@ -39,10 +39,21 @@
 
 # SSH参考链接
 <https://blog.csdn.net/jks212454/article/details/>
-#gcc/g++ CMake/Make
+# gcc/g++ CMake/Make
 1. 预处理，生成预编译文件（.i文件）：gcc –E main.c –o main.i
 2. 编译，生成汇编代码（.s文件）：gcc –S main.i –o main.s
 3. 汇编，生成目标文件（.o文件）：gcc –c main.s –o main.o
 4. 链接，生成可执行文件（executable文件）：gcc main.o –o main
+5. 参考链接 <https://blog.csdn.net/hjxu2016/article/details/83012946>
+6. <https://blog.csdn.net/hjxu2016/article/details/101699484>
+7. <https://blog.csdn.net/hjxu2016/article/details/102523522>
+
+# 静态库和动态库
+静态库将库代码静态地编译到可执行文件中，因此可执行文件的大小会增大；而动态库则是在运行时从共享库中加载所需的代码，因此可执行文件的大小较小。
+静态库一旦被链接，其中所有的代码都不再发生更改；而动态库可以在程序运行时被升级或替换。
+多个可执行文件可以使用同一个动态库，以减少内存占用和磁盘空间的使用。但每个可执行文件都需要包含其自己的静态库副本，因此可能会浪费大量的磁盘空间     
+原文链接：<https://blog.csdn.net/qq_41979948/article/details/129693847>
+
+
    
 
