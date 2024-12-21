@@ -37,3 +37,12 @@
 `光标切换到左边窗格 tmux select-pane -L 光标切换到右边窗格 tmux select-pane -R `<br>
  11. 列出所有快捷键 `tmux list-keys`
 
+# SSH参考链接
+<https://blog.csdn.net/jks212454/article/details/>
+#gcc/g++ CMake/Make
+1. 预处理，生成预编译文件（.i文件）：gcc –E main.c –o main.i
+2. 编译，生成汇编代码（.s文件）：gcc –S main.i –o main.s
+3. 汇编，生成目标文件（.o文件）：gcc –c main.s –o main.o
+4. 链接，生成可执行文件（executable文件）：gcc main.o –o main
+   
+
