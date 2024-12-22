@@ -3,13 +3,14 @@
 1. `ls` 列举当前所在目录文件 `ls -a` 所有文件 包括隐藏文件 `ls /` 不再以当前目录为根目录 `ls -l`detailed
 2. `pwd` 查询当前所在目录
 3. `cd` 进入其他目录 `cd /build`
-4. `echo " "` 输出" "中的字符
-5. `cat fileNAme.txt` 输出.txt文件中的内容
-6. `mv file1 file2` 移动文件.绝大多数命令可以通过加上一个`-v`来要求系统给出执行命令的反馈
-7. `touch filename.txt` 新建空的文本文件
-8. `mkdir file` 新建文件夹
-9. `rm -i tempfile.txt` 删除 -i是让系统在执行删除操作时增加一行确认信息；也可以使用`alias rm='rm -i'`让-i成为默认参数
-10. `ps`查询当前进程
+4. `cd ..` 返回上一级目录
+5. `echo " "` 输出" "中的字符
+6. `cat fileNAme.txt` 输出.txt文件中的内容
+7. `mv file1 file2` 移动文件.绝大多数命令可以通过加上一个`-v`来要求系统给出执行命令的反馈
+8. `touch filename.txt` 新建空的文本文件
+9. `mkdir file` 新建文件夹
+10. `rm -i tempfile.txt` 删除 -i是让系统在执行删除操作时增加一行确认信息；也可以使用`alias rm='rm -i'`让-i成为默认参数
+11. `ps`查询当前进程
 
 # tmux工具使用
 参考链接：<https://www.cnblogs.com/zhiminyu/p/17457933.html> 
@@ -44,15 +45,30 @@
 2. 编译，生成汇编代码（.s文件）：gcc –S main.i –o main.s
 3. 汇编，生成目标文件（.o文件）：gcc –c main.s –o main.o
 4. 链接，生成可执行文件（executable文件）：gcc main.o –o main
-5. 参考链接 <https://blog.csdn.net/hjxu2016/article/details/83012946>
-6. <https://blog.csdn.net/hjxu2016/article/details/101699484>
-7. <https://blog.csdn.net/hjxu2016/article/details/102523522>
+5. 使用gcc直接编译：gcc -c test.c //-> *.o   <br>
+   gcc -o test.exe test.o
+6. 参考链接 <https://blog.csdn.net/hjxu2016/article/details/83012946>
+7. <https://blog.csdn.net/hjxu2016/article/details/101699484>
+8. <https://blog.csdn.net/hjxu2016/article/details/102523522>
+9. <https://developer.aliyun.com/article/1472509> Makefile
 
 # 静态库和动态库
 静态库将库代码静态地编译到可执行文件中，因此可执行文件的大小会增大；而动态库则是在运行时从共享库中加载所需的代码，因此可执行文件的大小较小。
 静态库一旦被链接，其中所有的代码都不再发生更改；而动态库可以在程序运行时被升级或替换。
-多个可执行文件可以使用同一个动态库，以减少内存占用和磁盘空间的使用。但每个可执行文件都需要包含其自己的静态库副本，因此可能会浪费大量的磁盘空间     
+多个可执行文件可以使用同一个动态库，以减少内存占用和磁盘空间的使用。但每个可执行文件都需要包含其自己的静态库副本，因此可能会浪费大量的磁盘空间   
 原文链接：<https://blog.csdn.net/qq_41979948/article/details/129693847>
+
+
+# git工具使用
+1. 初始化仓库 git init
+2. git add .  | git add . --all //提交文件/所有文件
+3. git commit -m "文件描述信息"
+4. git remote add origin +.git地址  链接远程仓库 创建主分支
+5. git pull origin master //把本地仓库的变化连接到远程仓库的主分支
+6. git push -u origin master //把本地仓库的文件推送到远程仓库
+7. git remote remove origin  //取消链接
+
+
 
 
    
