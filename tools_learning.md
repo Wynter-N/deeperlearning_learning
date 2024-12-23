@@ -71,14 +71,23 @@
 21. makefile每条规则格式：<br>
 `<target>: <prerequisites>`<br>
 `[Tab]<commands>` <br>
-第一行冒号前为目标，冒号后为前置条件；第二行必须由一个Tab键起首，后接命令；目标是必须的，不可省略；前置条件和命令是可选的，但两者必须至少存在一个。
-22. 判断语句
+ 目标文件：依赖文件 <br>
+     要执行的命令 <br>  告诉make文件的依赖是什么，要如何生成文件
+23. 判断语句
     - else endif  条件判断
     - ifeq  值相等
     - ifneq
     - ifdef  值存在
     - ifndef
-23. 提示：*** missing separator (did you mean TAB instead of 8 spaces?).  Stop  缩进用TAB键
+24. 提示：*** missing separator (did you mean TAB instead of 8 spaces?).  Stop  缩进用TAB键
+25. makefile
+    - 一般把编译和链接分开来写 .c-> .o -> 可执行文件
+    - 对于更新时间晚于生成的文件的规则，不会重新编译
+    - clean :用来清理编译过程中生成的过程文件或者可执行文件  若本地目录下有一个叫做clean的文件时clean命令会失效  -->
+    - .PHONY:伪目标
+    - all: make默认执行第一个规则，添加一个all
+    - make filename:单独编译  make hello (e.g.)
+    - 
    
 
 
