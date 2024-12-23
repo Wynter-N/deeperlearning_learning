@@ -11,6 +11,12 @@
 9. `mkdir file` 新建文件夹
 10. `rm -i tempfile.txt` 删除 -i是让系统在执行删除操作时增加一行确认信息；也可以使用`alias rm='rm -i'`让-i成为默认参数
 11. `ps`查询当前进程
+12. <https://www.runoob.com/linux/linux-command-manual.html>
+13. `find .` <https://www.runoob.com/linux/linux-comm-find.html> 查找文件 
+14. `grep` <https://www.runoob.com/linux/linux-comm-grep.html> 查找内容包含指定的范本样式的文件
+15. `xargs xc -l` <https://www.runoob.com/linux/linux-comm-xargs.html> 管道输出？
+16. `sort` <https://www.runoob.com/linux/linux-comm-sort.html> 对文件进行排序
+17. `uniq` <https://www.runoob.com/linux/linux-comm-uniq.html>  删除相同行
 
 # tmux工具使用
 参考链接：<https://www.cnblogs.com/zhiminyu/p/17457933.html> 
@@ -95,6 +101,7 @@
 8. git remote -v //查看当前连接的远程仓库
 9. git branch -m <name> //创建分支
 10. 分支参考链接（在已经连接远程仓库的情况下）：<https://worktile.com/kb/ask/284935.html>
+
 
 
 
