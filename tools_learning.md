@@ -50,7 +50,32 @@
 6. 参考链接 <https://blog.csdn.net/hjxu2016/article/details/83012946>
 7. <https://blog.csdn.net/hjxu2016/article/details/101699484>
 8. <https://blog.csdn.net/hjxu2016/article/details/102523522>
-9. <https://developer.aliyun.com/article/1472509> Makefile
+9. <https://developer.aliyun.com/article/1472509> ubuntu下使用makefile编译c语言程序工程
+10. make all	编译所有目标
+11. make -j	使用所有的核心编译目标
+12. make -j8	使用8个核心编译目标
+13. make install	安装已编译的程序
+14. make uninstall	卸载已安装的程序
+15. make clean	删除由make命令产生的文件，通常删除目标文件.o
+16. make distclean	删除由./configure产生的文件
+17. make check	测试刚编译的软件
+18. make installcheck	检查安装的库和程序
+19. make dist	重新打包成packname-version.tar.gz
+20. 执行make命令时需要一个makefile文件，告诉make该如何编译和链接程序
+21. makefile每条规则格式：<br>
+`<target>: <prerequisites>`<br>
+`[Tab]<commands>` <br>
+第一行冒号前为目标，冒号后为前置条件；第二行必须由一个Tab键起首，后接命令；目标是必须的，不可省略；前置条件和命令是可选的，但两者必须至少存在一个。
+22. 判断语句
+    - else endif  条件判断
+    - ifeq  值相等
+    - ifneq
+    - ifdef  值存在
+    - ifndef
+23. 提示：*** missing separator (did you mean TAB instead of 8 spaces?).  Stop  缩进用TAB键
+   
+
+
 
 # 静态库和动态库
 静态库将库代码静态地编译到可执行文件中，因此可执行文件的大小会增大；而动态库则是在运行时从共享库中加载所需的代码，因此可执行文件的大小较小。
@@ -67,6 +92,10 @@
 5. git pull origin master //把本地仓库的变化连接到远程仓库的主分支
 6. git push -u origin master //把本地仓库的文件推送到远程仓库
 7. git remote remove origin  //取消链接
+8. git remote -v //查看当前连接的远程仓库
+9. git branch -m <name> //创建分支
+
+
 
 
 
