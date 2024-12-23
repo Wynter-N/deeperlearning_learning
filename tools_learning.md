@@ -94,6 +94,7 @@
 7. git remote remove origin  //取消链接
 8. git remote -v //查看当前连接的远程仓库
 9. git branch -m <name> //创建分支
+10. 分支参考链接（在已经连接远程仓库的情况下）：<https://worktile.com/kb/ask/284935.html>
 
 
 
