@@ -35,7 +35,7 @@ https://blog.csdn.net/qq_46311811/article/details/123524762 <br>
 creat了一个虚拟环境 envsPace<br>
 要注意conda的版本不能太低，会不兼容，出现问题。<br>
 下载地址：https://repo.anaconda.com/archive/ <br>
-
+新建虚拟环境enV
 ### 使用rpm命令时提示下载，下载时需要用到root权限，提示Authentication failure，刚安装完，没有设置root用户密码导致的。<br>
 使用
 `sudo passwd`<br>
